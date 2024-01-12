@@ -1,0 +1,59 @@
+POST http://localhost:5000/api/auth/register
+Content-Type:  application/json
+
+{
+    "username": "khanh1",
+    "password": "123"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type:  application/json
+
+{
+    "username": "khanh2",
+    "password": "123"
+}
+###
+GET http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzljOTE3NWIzZTgyNTQ4Y2E5YjUwZjgiLCJpYXQiOjE2NzEyNDIxNTd9.ey17D45m2pTSMmWlizZnJRdFexsYGAN6eLf0QKkDojY
+
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzljOTE3NWIzZTgyNTQ4Y2E5YjUwZjgiLCJpYXQiOjE2NzIxMDMzODZ9.yvOge_ZVTI1BDrUjhFuu6opY3kpCeJUrctn2b4hTu4k
+
+{
+    "title": "User 1-Khanh 3 post",
+    "description": "Lamam",
+    "url": "shopee.com",
+    "status": "TO LEARN"
+}
+
+###
+
+PUT http://localhost:5000/api/posts/63aa4648ae7c06f5782f4bcb
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzljOTE3NWIzZTgyNTQ4Y2E5YjUwZjgiLCJpYXQiOjE2NzIxMDUzMDl9._g1ycgIvH5B_kSIlZSFsWSRoNwmBsuYQc4o9NZtxUJE
+
+{
+    "title": "User 2-Khanh 2 post",
+    "description": "re-post",
+    "url": "shopee.com",
+    "status": "LEARNING"
+}
+
+###
+DELETE  http://localhost:5000/api/posts/639d218fba5a93d588a8c687
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzljOTU5NWIzNDhiMDllMmY1Y2YzYjEiLCJpYXQiOjE2NzEyNzg3MDd9.Tg9_M6To4rS0qXm2zKezTVtZTY24ggzrS6MNGf5SUBs
+
+{
+    "title": "User 2-Khanh 2 post",
+    "description": "re-post",
+    "url": "shopee.com",
+    "status": "LEARNING"
+}
